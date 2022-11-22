@@ -1,0 +1,14 @@
+name = "Wild Netherwart"
+filename = "wild_netherwart-1.7.10-v2.1.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "174a8afb2cf13d30e410ff950d9c2d64d7b0da41"
+
+[update]
+[update.curseforge]
+file-id = 2800076
+project-id = 317081

@@ -1,0 +1,14 @@
+name = "Hardcore Ender Expansion"
+filename = "HardcoreEnderExpansion  MC-1.7.10  v1.8.6.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "2de02e510fc31e81132c3a510b27137bf1112fc0"
+
+[update]
+[update.curseforge]
+file-id = 2316923
+project-id = 228015

@@ -1,0 +1,260 @@
+{
+    "images":
+    {
+		"gregtech_troll":
+		{
+            "image" : "mainmenu:modpack.png",
+            "posX" : -60,
+            "posY" : -110,
+            "width" : 117,
+            "height" : 105,
+            "alignment" : "center"
+		},
+        "title":
+        {
+            "image" : "mainmenu:gregtech6_logo.png",
+            "posX" : -192,
+            "posY" : -170,
+            "width" : 384,
+            "height" : 55,
+            "alignment" : "center"
+        }
+    },
+    
+    "buttons":
+    {
+        "singleplayer":
+        {
+            "text" : "menu.singleplayer",
+            "posX" : -100,
+            "posY" : 0,
+            "width" : 175,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:midbutton.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+        
+        "multiplayer":
+        {
+            "text" : "menu.multiplayer",
+            "posX" : -100,
+            "posY" : 25,
+            "width" : 175,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:midbutton.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "multiplayer"
+            }
+        },
+        
+        "mods":
+        {
+            "text" : "Mods",
+            "posX" : -100,
+            "posY" : 50,
+            "width" : 175,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:midbutton.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "mods"
+            }
+        },
+        "Bio Site":
+        {
+            "text" : "",
+            "posX" : 80,
+            "posY" : 25,
+            "width" : 20,
+            "height" : 20,
+			"alignment" : "center",
+			"tooltip": "My Youtube Channel",
+			"texture" : "mainmenu:web.png",
+			"imageWidth": "40",
+			"imageHeight": "40",
+            "action" : 
+            {
+                "type" : "openLink",
+				"link" : "https://www.youtube.com/channel/UCddR45Z9zC_OSorsM5Dkdcg"
+            }
+        },
+        "support":
+        {
+            "text" : "Join My Discord",
+            "posX" : -100,
+            "posY" : 75,
+            "width" : 98,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:shortbutton.png",
+            "action" : 
+            {
+                "type" : "openLink",
+				"link" : "https://discord.gg/F2m2gM2XC2"
+            }
+        },
+        "changelog":
+        {
+            "text" : "Changelogs",
+            "posX" : 2,
+            "posY" : 75,
+            "width" : 98,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:shortbutton.png",
+            "action" : 
+            {
+                "type" : "openLink",
+				"link" : ""
+            }
+        },
+        "options":
+        {
+            "text" : "menu.options",
+            "posX" : -100,
+            "posY" : 100,
+            "width" : 98,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:shortbutton.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+        
+        "quit":
+        {
+            "text" : "menu.quit",
+            "posX" : 2,
+            "posY" : 100,
+            "width" : 98,
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:shortbutton.png",
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+		
+        "shop":
+        {
+            "text" : "",
+            "posX" : 80,
+            "posY" : 50,
+			"tooltip": "Buy my stuff!!",
+            "width" : 20,
+			"imageWidth": "40",
+			"imageHeight": "40",
+            "height" : 20,
+			"alignment" : "center",
+			"texture" : "mainmenu:shop.png",
+            "action" : 
+            {
+                "type" : "openLink",
+                "link" : ""
+            }
+        },
+		
+        "language":
+        {
+            "text" : "",
+            "posX" : 80,
+            "posY" : 0,
+            "width" : 20,
+            "height" : 20,
+			"tooltip": "Language",
+			"alignment" : "center",
+			"imageWidth": "40",
+			"imageHeight": "40",
+			"texture" : "mainmenu:lang.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "languages"
+            }
+        },
+        
+        "refresh":
+        {
+            "text" : "",
+            "posX" : -20,
+            "posY" : 0,
+            "width" : 20,
+            "height" : 20,
+			"alignment" : "top_right",
+            "texture" : "mainmenu:refresh.png",
+            "action" : 
+            {
+                "type" : "refresh"
+            }
+        }
+    },
+    
+    "texts":
+    {
+        "mojang":
+        {
+            "text" : "Remember BoysGregified!",
+            "posX" : -108,
+            "posY" : -15,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        },
+		"forge":{
+			"text" : "Last Official Version of Minecraft",
+            "posX" : 5,
+            "posY" : -35,
+            "color" : -1,
+            "alignment" : "bottom_left"
+		},
+		"modsloaded":{
+			"text" : "#modsloaded# Mods Loaded",
+            "posX" : 5,
+            "posY" : -25,
+            "color" : -1,
+            "alignment" : "bottom_left"
+		},
+		"modsactive":{
+			"text" : "#modsactive# Mods Active",
+            "posX" : 5,
+            "posY" : -15,
+            "color" : -1,
+            "alignment" : "bottom_left"
+		},
+		"modpack":{
+			"text" : "Gregtech 6 Bio's Let's Play",
+            "posX" : 5,
+            "posY" : -45,
+            "color" : -1,
+            "alignment" : "bottom_left"
+		}
+    },
+    
+    "other": {
+    "background": {
+      "image": "",
+      "slideshow": {
+        "displayDuration": 100,
+        "fadeDuration": 40,
+        "images": [
+          "mainmenu:back/2.png",
+          "mainmenu:back/4.png",
+          "mainmenu:back/7.png"
+        ]
+      }
+    }
+    }
+}

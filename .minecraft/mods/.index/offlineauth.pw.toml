@@ -1,0 +1,14 @@
+name = "OfflineAuth"
+filename = "offlineauth-mc1.7.10-0.2.96.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "f88addec991a7aa300c62cd2df308cdaf8b5579b"
+
+[update]
+[update.curseforge]
+file-id = 4089280
+project-id = 646817
