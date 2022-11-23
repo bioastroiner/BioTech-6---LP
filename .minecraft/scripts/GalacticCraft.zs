@@ -1,15 +1,15 @@
 // importing mod option
 import mods.nei.NEI;
-
+ 
 // importing stuff for latter use
-
+ 
     //minecraft
 var furnance = <minecraft:furnace>;
 var glass = <minecraft:glass>;
 var Repeater = <minecraft:repeater>;
 var SlimeBall = <minecraft:slime_ball>;
 var Redstone = <minecraft:redstone>;
-
+ 
     //gregtech 6 
 var RobotArmMV = <gregtech:gt.multiitem.technological:12082>;
 var T6Circuit = <gregtech:gt.multiitem.technological:30306>;
@@ -17,7 +17,9 @@ var T3Circuit = <gregtech:gt.multiitem.technological:30303>;
 var CompactElectricConveyorMV = <gregtech:gt.multiitem.technological:12042>;
 var TinRotor = <gregtech:gt.meta.rotor:500>;
 var AcidCell = <gregtech:gt.multiitem.technological:20001>;
-
+var BatteryAlloyPlateCurved = <ore:plateCurvedBatteryAlloy>;
+var TinWire = <ore:craftingWireTin>;
+ 
     //galactic craft 
 var CoalGenerator = <GalacticraftCore:tile.machine>;
 var Refinery = <GalacticraftCore:tile.refinery>;
@@ -50,20 +52,27 @@ var IngotDesh = <ore:ingotDesh>;
 var CompressedDesh = <ore:compressedDesh>;
 var FluidManipulator = <GalacticraftMars:item.null:6>;
 var OxygenFan = <GalacticraftCore:item.airFan>;
-var AdvancedWafer = <GalacticraftCore:item.basicItem:14>;
+//var AdvancedWafer = <GalacticraftCore:item.basicItem:14>;
 var SolarWafer = <GalacticraftCore:item.basicItem:12>;
 var SolarModule = <GalacticraftCore:item.basicItem>;
 var SolarPanel = <GalacticraftCore:item.basicItem:1>;
 var AdvancedSolarPanel = <GalacticraftCore:tile.solar:4>;
 var BasicSolarPanel = <GalacticraftCore:tile.solar>;
 var battery = <GalacticraftCore:item.battery:100>;
-
+var AirVent = <GalacticraftCore:item.airVent>;
+var OxygenDeCompressor = <GalacticraftCore:tile.oxygenCompressor:4>;
+var OxygenConcentrator = <GalacticraftCore:item.oxygenConcentrator>;
+var OxygenDetector = <GalacticraftCore:tile.oxygenDetector>;
+var OxygenBubbleDistributor = <GalacticraftCore:tile.distributor>;
+var OxygenCollector = <GalacticraftCore:tile.oxygenCollector>;
+var OxygenSealer = <GalacticraftCore:tile.sealer>;
+ 
     //ImmersiveEngineering
-
+ 
 var GraphiteElectrode = <ImmersiveEngineering:graphiteElectrode>;
-
+ 
 //removing recipes
-
+ 
 recipes.remove(CoalGenerator);
 recipes.remove(Refinery);
 recipes.remove(NASAWorkbench);
@@ -83,8 +92,14 @@ recipes.remove(LaunchController);
 recipes.remove(FluidManipulator);
 recipes.remove(OxygenFan);
 recipes.remove(battery);
-
-
+recipes.remove(AirVent);
+recipes.remove(OxygenDeCompressor);
+recipes.remove(OxygenDetector);
+recipes.remove(OxygenBubbleDistributor);
+recipes.remove(OxygenCollector);
+recipes.remove(OxygenSealer);
+ 
+ 
 //hide stuff from NEI
 NEI.hide(Refinery);
 NEI.hide(CoalGenerator);
@@ -96,90 +111,131 @@ NEI.hide(SolarModule);
 NEI.hide(SolarPanel);
 NEI.hide(AdvancedSolarPanel);
 NEI.hide(BasicSolarPanel);
-
-
+NEI.hide(OxygenFan);
+ 
+ 
 //adding recipes
-
+ 
     //NASA workbench recipe
 recipes.addShaped(NASAWorkbench, 
 [[CompressedSteel, RobotArmMV, CompressedSteel],
 [RobotArmMV, T6Circuit, RobotArmMV],
 [CompressedSteel, RobotArmMV, CompressedSteel]]);
-
+ 
     //FuelLoader recipe
 recipes.addShaped(FuelLoader,
 [[CompressedSteel, CompressedSteel, CompressedSteel],
 [CompressedSteel, TinCanister, CompressedSteel],
 [CompressedAluminium, T3Circuit, CompressedAluminium]]);
-
+ 
     //AirLockController recipes
 recipes.addShaped(AirLockController,
 [[CompressedSteel, CompressedSteel, CompressedSteel],
 [CompressedMeteoricIron, T3Circuit, CompressedMeteoricIron],
 [CompressedSteel, CompressedSteel, CompressedSteel]]);
-
+ 
     //ElectricFurnance recipes
 recipes.addShaped(ElectricFurnance,
 [[CompressedSteel, CompressedSteel, CompressedSteel],
 [CompressedSteel, furnance, CompressedSteel],
 [CompressedAluminium, T3Circuit, CompressedAluminium]]);
-
+ 
     //EnergyStorageCluster recipes
 recipes.addShaped(EnergyStorageCluster,
 [[EnergyStorageModule, CompressedSteel, EnergyStorageModule],
 [CompressedSteel, T6Circuit, CompressedSteel],
 [EnergyStorageModule, CompressedSteel, EnergyStorageModule]]);
-
+ 
     //ElectricArcFurnance recipes
 recipes.addShaped(ElectricArcFurnance,
 [[HeavyDutyPlate, HeavyDutyPlate, HeavyDutyPlate],
 [GraphiteElectrode,ElectricFurnance, GraphiteElectrode],
 [MeteoriticIronIgot, T6Circuit, MeteoriticIronIgot]]);
-
+ 
     //SpinTHruster recipes
 recipes.addShaped(SpinTHruster,
 [[null, null, null],
 [FuelFullCanister, T6Circuit, Tier1RocketEngine],
 [CompressedSteel, MeteoriticIronIgot, CompressedSteel]]);
-
+ 
     //DisplayScreen recipes
 recipes.addShaped(DisplayScreen,
 [[CompressedSteel, T3Circuit, CompressedSteel],
 [T3Circuit, glass, T3Circuit],
 [CompressedSteel, T3Circuit, CompressedSteel]]);
-
+ 
     //FrequencyModule recipes
 recipes.addShaped(FrequencyModule,
 [[null, CompressedAluminium, null],
 [<ore:compressedIron>, Repeater, <ore:compressedIron>],
 [<minecraft:redstone>, T3Circuit, <minecraft:redstone>]]);
-
+ 
     //TelemetryUnit recipes
 recipes.addShaped(TelemetryUnit,
 [[CompressedTin, FrequencyModule, CompressedTin],
 [CompressedTin, T3Circuit, CompressedTin],
 [CompressedCopper, CompressedCopper, CompressedCopper]]);
-
+ 
     //LaunchController
 recipes.addShaped(LaunchController,
 [[IngotDesh, FrequencyModule, IngotDesh],
 [CompressedDesh, T6Circuit, CompressedDesh],
 [IngotDesh, CompactElectricConveyorMV, IngotDesh]]);
-
+ 
     //FluidManipulator recipes
 recipes.addShaped(FluidManipulator,
 [[MeteoriticIronIgot, TinRotor, MeteoriticIronIgot],
 [SlimeBall, T6Circuit, SlimeBall],
 [MeteoriticIronIgot, TinRotor, MeteoriticIronIgot]]);
-
+ 
     //OxygenFan recipes
-recipes.addShaped(OxygenFan,
-[[CompressedSteel, null, CompressedSteel],
-[null, T3Circuit, null],
-[CompressedSteel, Redstone, CompressedSteel]]);
-
+//recipes.addShaped(OxygenFan,
+//[[CompressedSteel, null, CompressedSteel],
+//[null, T3Circuit, null],
+//[CompressedSteel, Redstone, CompressedSteel]]);
+ 
     //AdvancedWafer recipes
-recipes.addShapeless(AdvancedWafer, [T6Circuit]);
-
+//recipes.addShapeless(AdvancedWafer, [T6Circuit]);
+ 
     //battery recipes
-recipes.addShapeless(battery, [AcidCell]);
+recipes.addShaped(battery,
+[[null, TinWire, null],
+[null, AcidCell, null],
+[null, BatteryAlloyPlateCurved, null]]);
+ 
+    //AirVent recipes
+recipes.addShaped(AirVent,
+[[null, CompressedTin, null],
+[CompressedSteel, TinRotor, CompressedSteel],
+[null, CompressedTin, null]]);
+ 
+    //OxygenDeCompressor recipes
+recipes.addShaped(OxygenDeCompressor,
+[[CompressedSteel, TinRotor, CompressedSteel],
+[CompressedAluminium, OxygenConcentrator, CompressedAluminium],
+[CompressedSteel, T3Circuit, CompressedSteel]]);
+ 
+    //oxygen Detector recipes
+recipes.addShaped(OxygenDetector,
+[[CompressedSteel, CompressedSteel, CompressedSteel],
+[AirVent, T3Circuit, AirVent],
+[Redstone, CompressedAluminium, Redstone]]);
+ 
+    // Oxygen Bubble Distributor recipes
+recipes.addShaped(OxygenBubbleDistributor,
+[[CompressedSteel, TinRotor, CompressedSteel],
+[AirVent, CompressedAluminium, AirVent],
+[CompressedSteel, TinRotor, CompressedSteel]]);
+ 
+    //Oxygen Collector recipes
+recipes.addShaped(OxygenCollector,
+[[CompressedSteel, CompressedSteel, CompressedSteel],
+[TinRotor, TinCanister, AirVent],
+[CompressedAluminium, OxygenConcentrator, CompressedAluminium]]);
+ 
+    //Oxygen Sealer recipes
+recipes.addShaped(OxygenSealer,
+[[CompressedAluminium, CompressedSteel, CompressedAluminium],
+[AirVent, TinRotor, AirVent],
+[CompressedAluminium, CompressedSteel, CompressedSteel]]);
+ 
