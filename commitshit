@@ -1,0 +1,3 @@
+#!/bin/sh   
+# we do a little trolling
+git add -A && git commit -m 'initial commit' && git push origin master
