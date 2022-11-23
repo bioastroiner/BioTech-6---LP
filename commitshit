@@ -1,3 +1,4 @@
-#!/bin/sh   
-# we do a little trolling
-git add -A && git commit -m 'initial commit' && git push origin master
+#!/bin/sh 
+# troll
+[ -z "$1" ] && git add -A && git commit -m './commitshit goes brrr' && git push origin master
+#! [ -z "$1" ] && git add -A && git commit -m $1 && git push origin master
