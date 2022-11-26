@@ -1,4 +1,0 @@
-#!/bin/sh 
-# troll
-[ -z "$1" ] && git add -A && git commit -m './commitshit goes brrr' && git push origin master
-[ ! -z "$1" ] && git add -A && git commit -m "$1" && git push origin master

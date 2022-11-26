@@ -1,0 +1,17 @@
+[
+  {
+    "validServer": true,
+    "ip": "localhost",
+    "port": "25565",
+    "restPort": "4567",
+    "identifier": "",
+    "displayName": "",
+    "password": "",
+    "useKey": false,
+    "privateKeyPath": "",
+    "publicKeyPath": "",
+    "registrationOpen": false,
+    "registrationTokenOpen": false,
+    "skinUploadAllowed": false
+  }
+]
